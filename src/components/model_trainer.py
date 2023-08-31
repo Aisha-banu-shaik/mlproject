@@ -15,7 +15,7 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor,AdaBoostRegressor,GradientBoostingRegressor
 from sklearn.svm import SVR
-from sklearn.linear_model import LinearRegression,Ridge, Lasso
+from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score,mean_absolute_error, mean_squared_error
 from sklearn.model_selection import RandomizedSearchCV
 from catboost import CatBoostRegressor
@@ -45,9 +45,7 @@ class ModelTrainer:
                 test_array[:,-1]              
                     )
             models={
-               "LinearRegression":LinearRegression(),
-               "Lasso":Lasso(),
-               "Ridge":Ridge(),
+               "Linear Regression": LinearRegression(),
                "K-Neighbors Regressor":KNeighborsRegressor(),
                "Decision Tree":DecisionTreeRegressor(),
                "Random Forest Regressor":RandomForestRegressor(),
